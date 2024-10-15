@@ -344,3 +344,100 @@ main {
 .body img {
     width: 100%;
 }
+
+
+/* Button styling */
+.button-container {
+    display: flex;
+    align-items: center;
+    position: relative; /* Positioning context for the button text */
+}
+
+.upload-button, .logout-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #262626;
+    padding: 0;
+    position: relative; /* Make sure the text appears over the button */
+}
+
+.bi {
+    font-size: 22px; /* Adjust the size of the icon */
+    padding-bottom: 6px;
+    color: #262626;
+}
+
+.button-text {
+    display: none; /* Hide the text by default */
+    position: absolute; /* Position text relative to the button */
+    bottom: -25px; /* Position text below the button */
+    left: 50%;
+    transform: translateX(-50%); /* Center the text horizontally */
+    white-space: nowrap; /* Prevent the text from wrapping */
+    background: #f1f1f1; /* Background color for visibility */
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #262626;
+}
+
+.upload-button:hover .button-text,
+.logout-button:hover .button-text {
+    display: inline; /* Show text on hover */
+}
+
+/* Create post */
+.upload-form {
+    display: none;
+    width: 400px; /* Adjust width as needed */
+    margin: 20px auto; /* Center the form */
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    border: 1px solid #dbdbdb; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: relative;
+    z-index: 1000;
+}
+
+.upload-form h2 {
+    font-size: 24px; /* Title font size */
+    margin-bottom: 20px; /* Space below title */
+    text-align: center; /* Center the title */
+}
+
+.upload-form input[type="file"] {
+    display: block; /* Block layout */
+    margin: 0 auto 15px; /* Center and space below */
+    padding: 10px; /* Padding for file input */
+    border: 1px solid #dbdbdb; /* Light gray border */
+    border-radius: 4px; /* Slightly rounded corners */
+    width: 100%; /* Full width */
+}
+
+.upload-form input[type="text"] {
+    display: block; /* Block layout */
+    margin: 0 auto 15px; /* Center and space below */
+    padding: 10px; /* Padding for text input */
+    border: 1px solid #dbdbdb; /* Light gray border */
+    border-radius: 4px; /* Slightly rounded corners */
+    width: 100%; /* Full width */
+    font-size: 16px; /* Text font size */
+}
+
+.upload-form button {
+    background-color: #0095f6; /* Instagram's blue color */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    width: 100%; /* Full width */
+    font-size: 16px; /* Text font size */
+}
+
+.upload-form button:hover {
+    background-color: #007bbd; /* Darker blue on hover */
+}

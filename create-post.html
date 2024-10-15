@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+</head>
+<body>
+    <div id="upload-form" class="upload-form" style="display: block;">
+        <h2>
+            <img src="./assets/instagram logo.jpg" alt="Instagram Logo" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 8px;">
+            Create a Post
+        </h2>
+        <form id="post-form">
+            <input type="file" id="file-input" accept="image/*" required />
+            <input type="text" id="caption-input" placeholder="Add a caption..." required />
+            <button type="submit">Share</button>
+        </form>
+    </div>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
+    
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAOWDkrQbgTDY3enlhC0zwChtauGhnqaTk",
+            authDomain: "instagram-clone-f6a4c.firebaseapp.com",
+            projectId: "instagram-clone-f6a4c",
+            storageBucket: "instagram-clone-f6a4c.appspot.com",
+            messagingSenderId: "573731066626",
+            appId: "1:573731066626:web:c2a2fe0006a236e07d681b"
+        };
+    
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+        const storage = firebase.storage();
+        console.log(db);
+    </script>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/cuid/1.3.8/browser-cuid.min.js"
+        integrity="sha512-AvtLzKgbVcTZJ0QZ3nLJoTGN2wiE/emjebM9xneyqhtEBRTsNB+8oeQGkOmyOF+gnJd7k3Zvnghs9m6EuTpTEw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script src="app.js"></script>
+</body>
+</html>
