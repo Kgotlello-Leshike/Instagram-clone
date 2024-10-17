@@ -47,32 +47,32 @@ class App {
     }
 
     addEventListeners() {
-        // Ensure the logout button exists before adding the listener
+        
         this.$logoutButton = document.querySelector(".logout-button");
         if (this.$logoutButton) {
             this.$logoutButton.addEventListener("click", (event) => {
-                event.preventDefault(); // Prevent the default anchor link behavior
+                event.preventDefault(); 
                 this.handleLogout();
             });
         } else {
             console.error("Logout button not found in the DOM");
         }
     
-        // Ensure the upload button exists before adding the listener
+        
         if (this.$uploadButton) {
             this.$uploadButton.addEventListener("click", (event) => {
-                event.preventDefault(); // Prevent default link behavior
+                event.preventDefault(); 
                 this.showUploadForm();
             });
         } else {
             console.error("Upload button not found in the DOM");
         }
     
-        // Ensure the post form exists before adding the listener
+        
         const postForm = document.querySelector("#post-form");
         if (postForm) {
             postForm.addEventListener("submit", (event) => {
-                event.preventDefault(); // Prevent default form submission
+                event.preventDefault(); 
                 this.uploadPost();
             });
         } else {
@@ -82,8 +82,8 @@ class App {
     
     showUploadForm() {
         console.log("Showing upload form...");
-        this.$uploadForm.style.display = "block"; // Show the upload form
         this.$app.style.display = "none"; // Hide the main app content
+        this.$uploadForm.style.display = "block"; // Show the upload form
     }
 
     async uploadPost() {
